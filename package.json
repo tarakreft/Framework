@@ -1,0 +1,23 @@
+{
+  "name": "framework",
+  "version": "1.0.0",
+  "description": "A series of help libraries/functions for creating REST APIs, with TravisCI.",
+  "main": "app.js",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarakreft/Framework.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tarakreft/Framework/issues"
+  },
+  "homepage": "https://github.com/tarakreft/Framework#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai-http": "^1.0.0",
+    "gulp": "^3.9.0",
+    "mocha": "^2.3.4",
+  }
+}
