@@ -1,5 +1,4 @@
-var http = require('http'),
-	url = require('url');
+var ServeLaff = require('./server.js').ServeLaff;
 
 var Joke = function() {
 
@@ -29,20 +28,24 @@ var jokes = ["I'm sick of having to go to two different huts to buy pizza and su
 "I hide photos on my computer of me petting animals at the zoo in a file named 'fireworks and vacuums' so my dog won't find them. -@EliTerry"];
 
 var singleJoke = jokes[Math.floor(Math.random()*jokes.length-1)];
+
 	this.get = function() {
-		var server = http.createServer(function (req, res) {
-			if ( req.url === '/joke' ) {		
-			res.writeHead(200, {'Content-Type': 'text/html'});
-			res.write(singleJoke);
-			}
-		res.end();	
-		});	
-	
-		server.listen(3000, function (err) {
-			if (err) throw err;
-			console.log('server listening at 3000...');
-		});
+		ServeLaff(singleJoke);	
+		ServeLaff.listen('server listening...checkout localhost:3000/joke for a chuckle');
 	};	
+
+	this.post = function(newJoke) {
+		jokes.push(newJoke);
+		ServeLaff(newJoke);
+		ServeLaff.listen('server listening...your sweet joke has been posted, view it at localhost:3000/joke');
+	};
+
+	this.delete = function(badJoke) {
+		ServeLaff(singleJoke);
+		console.log(jokes);
+		ServeLaff.listen('server listening...your bad joke has been deleted, view a fresh joke at localhost:3000/joke');
+	}
+
 };
 
 module.exports.Joke = Joke;
