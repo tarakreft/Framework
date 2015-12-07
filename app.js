@@ -44,7 +44,7 @@ var singleJoke = jokes[Math.floor(Math.random()*jokes.length-1)];
 		ServeLaff(singleJoke);
 		console.log(jokes);
 		ServeLaff.listen('server listening...your bad joke has been deleted, view a fresh joke at localhost:3000/joke');
-	}
+	};
 
 };
 

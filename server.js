@@ -3,6 +3,7 @@ var http = require('http'),
 
 var ServeLaff = function (laff) {
 	var server = http.createServer(function (req, res) {
+		if (err) throw err;
 		if ( req.url === '/joke' ) {
 
 		ServeLaff.write = function () {
