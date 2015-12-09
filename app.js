@@ -31,19 +31,18 @@ var singleJoke = jokes[Math.floor(Math.random()*jokes.length-1)];
 
 	this.get = function() {
 		ServeLaff(singleJoke);	
-		ServeLaff.listen('server listening...checkout localhost:3000/joke for a chuckle');
+		ServeLaff.listen('server listening...checkout localhost:3000/joke for a chuckle', 3000);
 	};	
 
 	this.post = function(newJoke) {
 		jokes.push(newJoke);
 		ServeLaff(newJoke);
-		ServeLaff.listen('server listening...your sweet joke has been posted, view it at localhost:3000/joke');
+		ServeLaff.listen('server listening...your sweet joke has been posted, view it at localhost:8080/joke', 8080);
 	};
 
 	this.delete = function(badJoke) {
 		ServeLaff(singleJoke);
-		console.log(jokes);
-		ServeLaff.listen('server listening...your bad joke has been deleted, view a fresh joke at localhost:3000/joke');
+		ServeLaff.listen('server listening...your bad joke has been deleted, view a fresh joke at localhost:8000/joke', 8000);
 	};
 
 };
