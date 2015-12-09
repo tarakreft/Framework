@@ -2,7 +2,7 @@
  A RESTful API using the http module to get, post, and delete jokes.
  
 #Getting Started
-Clone the repo and type '''npm i'''
+Clone the repo and type Javascript '''npm i'''
 Include in your project using '''var Joke = require('./app.js').Joke;'''
 
 #Using Chuckles
