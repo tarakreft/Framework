@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 	mocha = require('gulp-mocha');
 
 gulp.task('default', function () {
-	gulp.start('mocha', 'jshint');
+	gulp.start('mocha/chai', 'jshint');
 });
 
 gulp.task('jshint', function () {
@@ -12,7 +12,7 @@ gulp.task('jshint', function () {
 	.pipe(jshint.reporter('default'));
 });
 
-gulp.task('mocha', function () {
+gulp.task('mocha/chai', function () {
 	return gulp.src('test.js')
 	.pipe(mocha({reporter:'nyan'}));
 });
