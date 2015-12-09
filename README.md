@@ -30,7 +30,8 @@ app.post('This is a terrible Joke');
 ```
 
 To delete a bad joke:
-'''app.delete('This is a terrible Joke');
+```javascript
+app.delete('This is a terrible Joke');
 ```
 
 
