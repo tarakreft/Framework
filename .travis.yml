@@ -4,7 +4,9 @@ node_js:
 before_scrpt: 
   - npm install gulp
 script: gulp
-
+bundler_args: --retry 3
+install: travis_retry bundle install
+install: travis_wait mvn install
 cache:
   directories:
     - node_modules
