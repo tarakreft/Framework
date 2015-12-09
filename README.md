@@ -3,24 +3,36 @@
  
 #Getting Started
 Clone the repo and type:
-'''javascript 
+
+```javascript
 npm i
-'''
-Include in your project using '''var Joke = require('./app.js').Joke;'''
+```
+Include in your project using:
+```javascript
+var Joke = require('./app.js').Joke;
+```
 
 #Using Chuckles
 
 First create a new instance of Joke:
-'''var app = new Joke();'''
+```javascript
+var app = new Joke();
+```
 
 To then get a joke:
-'''app.get();'''
+```javascript
+app.get();
+```
 
 To post an original joke:
-'''app.post('This is a terrible Joke');'''
+```javascript
+app.post('This is a terrible Joke');
+```
 
 To delete a bad joke:
-'''app.delete('This is a terrible Joke');'''
+'''app.delete('This is a terrible Joke');
+```
+
 
 
 
