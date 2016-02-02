@@ -2,12 +2,12 @@
  A RESTful API using the http module to get, post, and delete jokes.
  
 #Getting Started
-Clone the repo and type:
+You will need npm and node.js to use Chuckles. Clone the repo and type:
 
 ```javascript
 npm i
 ```
-Include in your project using:
+into your terminal. Include in your project using:
 ```javascript
 var Joke = require('./app.js').Joke;
 ```
