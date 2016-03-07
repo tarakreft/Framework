@@ -24,9 +24,8 @@ describe('ServeLaff get method', function () {
 				done();
 			});
 		});
-
+server.destroy();
 	});
-
 });
 
 describe('ServeLaff post method', function () {
@@ -42,7 +41,6 @@ describe('ServeLaff post method', function () {
 				done();
 			});
 		});
-
+server.destroy();
 	});
-
 });
